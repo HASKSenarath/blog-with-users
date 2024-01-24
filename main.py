@@ -77,8 +77,8 @@ class User(UserMixin, db.Model):
     comments = relationship("Comment", back_populates="commenter")
 
 
-# with app.app_context():
-#     db.create_all()
+with app.app_context():
+    db.create_all()
 
 gravatar = Gravatar(app,
                     size=100,
